@@ -266,6 +266,10 @@ section {
   color: var(--black);
 }
 
+#contact a {
+  width: max(15rem,100%);
+}
+
 #contact h2 {
   border: solid black 1px;
   background-color: var(--white);
@@ -332,7 +336,7 @@ footer p {
 
   .project-card {
     grid-template-columns: 1fr;
-    grid-template-rows: 15rem 20rem ;
+    grid-template-rows: 17rem 20rem ;
     padding: 1rem;
   }
 
@@ -342,7 +346,7 @@ footer p {
   }
 
   .project-image img {
-    width:max(10rem,80%);
+    width:min(20rem,80%);
   }
   
   .project-text {
