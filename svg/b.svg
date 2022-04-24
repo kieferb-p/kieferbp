@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.5 8.5">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Logo">
+      <g id="B">
+        <path d="M.25,4.25h2a2,2,0,0,1,2,2v0a2,2,0,0,1-2,2h-2a0,0,0,0,1,0,0v-4A0,0,0,0,1,.25,4.25Z" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+        <path d="M.25.25h2a2,2,0,0,1,2,2v0a2,2,0,0,1-2,2h-2a0,0,0,0,1,0,0v-4A0,0,0,0,1,.25.25Z" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>
