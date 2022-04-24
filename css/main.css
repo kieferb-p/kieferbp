@@ -1,5 +1,7 @@
 /* - - - - -Imports- - - - - */
 
+/*TODO: fix centering of the logo*/
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:500");
 @import url("https://fonts.googleapis.com/css?family=Raleway:400");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300");
@@ -38,13 +40,46 @@ svg {
 /* - - - - - - Colours - - - - - - */
 :root {
   --black: #131313;
-  --white: rgb(238, 239, 240);
+  --white: #eeeff0;
   --accent-dark: #502fbb;
   --secondary: #2d81d5;
   --secondary-dark: #537aa9;
   --main: #1e6a8b;
   --accent: #6bbab6;
 }
+
+/* - - - - - -  Animations - - - - - - */
+
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-1rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(1rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  
+
+
 
 /* - - - - - - Typography - - - - - - */
 
@@ -71,7 +106,8 @@ h5 {
 
 h1 {
   margin-top: 0;
-  font-size: 9.089rem;
+  font-size: 2.1rem;
+  font-weight: 400;
 }
 
 h2 {
@@ -108,23 +144,12 @@ header {
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  background-color: var(--white);
 }
 
 .logo-container {
-  margin: 0rem;
-  padding: 0rem;
-}
-#logo {
-  padding: 0rem;
-  margin: 0rem;
-}
-
-.nav-container {
-  background-color: var(--background);
-  position: sticky;
-  top: 0rem;
-  width: 80vw;
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .nav-bar {
@@ -146,7 +171,6 @@ header {
 
 #about-me {
   color: var(--main);
-  translate: from(translateX(35rem)) to(translateX(0rem));
 }
 
 #des-projects {
@@ -185,17 +209,33 @@ section {
 /* - - - - - - About Me - - - - - - */
 #about {
   background-color: var(--main);
-  /* box-shadow: #000000 0px 12px 36px; */
+  box-shadow: #000000 0px 12px 36px;
+  
 }
+
+#about .section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+}
+
 .profile-pic {
-  width: min(25rem, 100%);
-  height: 100%;
-  border-radius: 2%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic img {
+  width: min(20rem, 100%);
+  border-radius: 1rem;
+  margin: 1rem;
   padding: 0rem;
 }
 
 /* - - - - - - Projects - - - - - - */
+#designs, #dev {
+  box-shadow: #000000 0px 12px 36px;
+} 
 
 .section-container {
   display: grid;
@@ -224,7 +264,8 @@ section {
   background-color: var(--white);
   color: var(--black);
   margin-bottom: 2rem;
-  border-radius: 0.5rem;
+  box-shadow: #000000 0px -5px 16px;
+
 }
 
 .project-image {
@@ -255,6 +296,7 @@ section {
 /* - - - - - - Contact Me - - - - - - */
 
 #contact {
+  box-shadow: #000000 0px 12px 36px;
   background-color: var(--secondary);
   color: var(--black);
 }
@@ -303,6 +345,12 @@ footer p {
     padding:0;
     margin:0;
     border:none;
+  }
+
+  #about .section-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
   }
   .project-card {
     grid-template-columns: min(40%,20rem) 5% 50%;
