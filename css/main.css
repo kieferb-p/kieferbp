@@ -266,8 +266,8 @@ section {
   color: var(--black);
 }
 
-#contact a {
-  width: max(15rem,100%);
+#contact-me-button{
+  width: min(15rem,100%);
 }
 
 #contact h2 {
