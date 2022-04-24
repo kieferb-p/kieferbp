@@ -147,15 +147,19 @@ header {
 }
 
 .logo-container {
-  display:flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  display:grid;
+  grid-template-columns: 1fr;
+}
+
+#logo {
+  align-self: center;
+  width:min(15rem,100%);
 }
 
 .nav-bar {
   list-style: none;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column;
   align-items: center;
   justify-content: space-evenly;
   padding: 0;
@@ -178,7 +182,7 @@ header {
 }
 
 #dev-projects {
-  color: var(--accent-dark);
+  color: var(--secondary-dark);
 }
 
 #contact-me {
@@ -226,8 +230,9 @@ section {
 }
 
 .profile-pic img {
+  box-shadow: rgb(4, 29, 40) 0px -2px 20px 12px;
   width: min(20rem, 100%);
-  border-radius: 1rem;
+  border-radius: 50%;
   margin: 1rem;
   padding: 0rem;
 }
@@ -347,6 +352,23 @@ footer p {
     border:none;
   }
 
+  .nav-container {
+    display: flex;
+    width:80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav-bar {
+    display:grid;
+    width:100%;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
   #about .section-container {
     display: flex;
     flex-direction: row-reverse;
@@ -368,6 +390,17 @@ footer p {
 @media only screen and (min-width: 90rem) {
   html {
     font-size: 125%;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .nav-bar {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .nav-li {
+    padding:0rem;
   }
 
   .project-container {
