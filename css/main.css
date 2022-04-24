@@ -92,7 +92,7 @@ h5 {
 
 p {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 small,
@@ -185,7 +185,7 @@ section {
 /* - - - - - - About Me - - - - - - */
 #about {
   background-color: var(--main);
-  box-shadow: #000000 0px 12px 36px;
+  /* box-shadow: #000000 0px 12px 36px; */
 }
 .profile-pic {
   width: min(25rem, 100%);
@@ -193,10 +193,6 @@ section {
   border-radius: 2%;
   margin: 0 auto;
   padding: 0rem;
-}
-
-.about-text {
-  font-size: 1.1rem;
 }
 
 /* - - - - - - Projects - - - - - - */
@@ -223,6 +219,7 @@ section {
 
 .project-card {
   display: grid;
+  padding: 1rem;
   grid-template-columns: 1fr;
   background-color: var(--white);
   color: var(--black);
@@ -231,7 +228,7 @@ section {
 }
 
 .project-image {
-  padding-top: 1rem;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,10 +242,6 @@ section {
   text-align: center;
   text-decoration: underline;
   margin: 1.5rem 0rem;
-}
-
-.project-description {
-  padding: 1rem 1rem;
 }
 
 #designs {
@@ -298,6 +291,7 @@ footer p {
 }
 
 .footer-container {
+  text-align: center;
   margin: 0rem;
 }
 
@@ -312,19 +306,20 @@ footer p {
   }
   .project-card {
     grid-template-columns: min(40%,20rem) 5% 50%;
+    grid-template-rows: 18rem;
     align-items: center;
-    justify-items: center;
-    padding: 1rem;
+    justify-items: space-evenly;
   }
 
   .project-text {
-    grid-column: 3/4;
+    align-self: center;
+    grid-column: 3/5;
   }
 }
 
-@media only screen and (min-width: 75rem) {
+@media only screen and (min-width: 90rem) {
   html {
-    font-size: 135%;
+    font-size: 125%;
   }
 
   .project-container {
@@ -334,10 +329,9 @@ footer p {
     gap: 1rem;
   }
 
-  .project-card {
+  .project-card , #dev .project-card {
     grid-template-columns: 1fr;
-    grid-template-rows: 17rem 20rem ;
-    padding: 1rem;
+    grid-template-rows: 15rem 22rem ;
   }
 
   .project-image{
@@ -350,6 +344,8 @@ footer p {
   }
   
   .project-text {
+    padding:1rem;
+    align-self:flex-start ;
     grid-column: 1/2;
     grid-row: 2/3;
   }
