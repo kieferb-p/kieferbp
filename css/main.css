@@ -534,7 +534,7 @@ footer .sub-footer {
 
   .project-card{
     grid-template-columns: 1fr;
-    grid-template-rows: 15rem 25rem;
+    grid-template-rows: 15rem 20rem;
   }
 
   #designs .project-card {
