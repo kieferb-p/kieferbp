@@ -42,10 +42,10 @@ svg {
   --black: #131313;
   --white: #eeeff0;
   --accent-dark: #502fbb;
-  --secondary: #2d81d5;
+  --secondary: #4982ba;
   --secondary-dark: #537aa9;
   --main: #1e6a8b;
-  --accent: #6bbab6;
+  --accent: #a5f5f1;
 }
 
 /* - - - - - -  Animations - - - - - - */
@@ -182,9 +182,10 @@ header {
 }
 
 #contact-me {
+  padding: 0.5rem;
   color: var(--accent);
-  border: var(--black) solid 1px;
-  background-color: #1b001b;
+  border: var(--secondary) solid 1px;
+  background-color: #1b1b00;
   border-radius: 0.5rem;
 }
 
@@ -266,6 +267,7 @@ section {
   color: var(--black);
   margin-bottom: 2rem;
   box-shadow: #000000 0px -5px 16px;
+  border-radius: .25rem;
 }
 
 .project-image {
@@ -277,6 +279,10 @@ section {
 
 .project-image img {
   width: max(15rem, 80%);
+}
+
+#chesss {
+  width: min(12rem,100%)
 }
 
 .project-title {
@@ -293,16 +299,47 @@ section {
   background-color: var(--secondary-dark);
 }
 
-/* - - - - - - Contact Me - - - - - - */
+/* - - - - - - Call to action - - - - - - */
 
-#contact {
-  box-shadow: #000000 0px 12px 36px;
-  background-color: var(--secondary);
-  color: var(--black);
+#cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.659), rgba(0, 0, 0, 0.658)),
+    center no-repeat url("../images/cta.png");
+  height: 18rem;
+  box-shadow: #131313 0px 0px 16px 2px;
+  margin: 2rem auto;
+}
+
+.cta-banner {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cta-message {
+  line-height: 1.2;
 }
 
 #contact-me-button {
-  width: min(15rem, 100%);
+  border: var(--black) solid 1px;
+  background-color: var(--white);
+  opacity: 90%;
+  color:var(--black);
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 2rem;
+  text-align: center;
+  padding: .5rem 0rem;
+  width: min(12rem, 100%);
+}
+
+#contact-me-button:hover {
+  background-color: var(--accent);
+  color: var(--white);
+  opacity: 100%;
+  cursor: pointer;
 }
 
 #contact h2 {
@@ -323,18 +360,49 @@ section {
 /* - - - - - - Footer - - - - - - */
 
 footer {
-  background-color: var(--secondary-dark);
+  border-top: solid var(--black) 1px;
+  background-color: var(--secondary);
   margin: 0 auto;
-}
-
-footer h3,
-footer p {
-  margin: 0rem auto;
+  box-shadow: #131313 0px -2px 16px 2px;
 }
 
 .footer-container {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  border: solid var(--white) 1px;
+  background-color: var(--white);
+  box-shadow: var(--black) 0px -2px 19px 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+}
+
+.footer-nav .nav-bar {
+  width: 95vw;
+  color: var(--black);
+}
+
+.footer-nav .nav-bar .nav-li {
+  font-size: 1rem;
+  padding: 0;
+}
+
+.footer-nav .nav-bar .nav-li:hover {
+  color: var(--white);
+}
+
+footer .sub-footer {
+  background-color: var(--secondary-dark);
   text-align: center;
-  margin: 0rem;
+  box-shadow: #131313 0px -2px 32px .5px;
 }
 
 /* - - - - - - Media Queries - - - - - - */
