@@ -251,7 +251,7 @@ section {
   align-items: center;
 }
 
-.project-container .project-anchor:hover {
+.project-container .project-anchor{
   box-shadow: #0000007a 0rem 1rem 1rem;
   transform: scaleX(1.02) scaleY(1.02);
   transition-duration: 0.25s;
@@ -275,15 +275,18 @@ section {
   justify-content: center;
 }
 
-.project-anchor {
+.project-image a {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.project-anchor:hover {
+
+.project-anchor:active {
+  box-shadow: none;
   cursor:pointer;
+  border: outset var(--accent-dark) 3px
 }
 
 .project-image img {
