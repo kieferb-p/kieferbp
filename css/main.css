@@ -197,7 +197,7 @@ header {
 #des-projects:hover,
 #dev-projects:hover,
 #contact-me:hover {
-  color: var(--white);
+  color: var(--black);
 }
 
 /* - - - - - - Main - - - - - - */
