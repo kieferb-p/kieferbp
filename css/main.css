@@ -1,5 +1,7 @@
 /* - - - - -Imports- - - - - */
 
+/* TODO: add linkedin to the contact section
+
 @import url("https://fonts.googleapis.com/css?family=Raleway:500");
 @import url("https://fonts.googleapis.com/css?family=Raleway:400");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300");
@@ -151,6 +153,16 @@ header {
   padding: 0;
 }
 
+.nav-bar li {
+  display: grid;
+}
+
+.nav-bar li a {
+  align-self:center;
+  justify-self: center;
+}
+
+
 .nav-li {
   text-decoration: none;
   text-transform: uppercase;
@@ -291,13 +303,19 @@ section {
 .project-text{
   display: grid;
   justify-items: center;
+  align-items: flex-start;
+  height: 100%;
 }
 
+.project-description {
+  
+}
 
 .git-link {
   display: flex;
   flex-direction: row;
   justify-self: flex-end;
+  align-self: flex-end;
   padding-right:1rem;
   padding-bottom: .5rem;
   width:15rem;
@@ -431,7 +449,7 @@ footer .sub-footer {
 
 /* - - - - - - Media Queries - - - - - - */
 
-@media only screen and (min-width: 45rem) {
+@media only screen and (min-width: 60rem) {
   html {
     font-size: 110%;
     padding: 0;
@@ -469,12 +487,13 @@ footer .sub-footer {
   }
 
   .project-text {
+    grid-template-rows: 3rem 1fr 1fr;
     align-self: center;
     grid-column: 3/5;
   }
 }
 
-@media only screen and (min-width: 90rem) {
+@media only screen and (min-width: 85rem) {
   html {
     font-size: 125%;
   }
@@ -500,7 +519,7 @@ footer .sub-footer {
   .project-card,
   #dev .project-card {
     grid-template-columns: 1fr;
-    grid-template-rows: 15rem 22rem;
+    grid-template-rows: 15rem 25rem;
   }
 
   .project-image {
@@ -517,5 +536,9 @@ footer .sub-footer {
     align-self: flex-start;
     grid-column: 1/2;
     grid-row: 2/3;
+  }
+
+  .project-title {
+    margin-bottom: .5rem;
   }
 }
