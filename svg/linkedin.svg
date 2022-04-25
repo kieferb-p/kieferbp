@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 255.52">
+  <g id="Layer_1" data-name="Layer 1"/>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Final_Icons" data-name="Final Icons">
+      <g>
+        <rect x="4.69" y="85.02" width="53.25" height="170.5"/>
+        <circle cx="31.32" cy="31.32" r="31.32"/>
+        <path d="M256,255.52h-53.25v-96.7s1.82-30.86-27.38-31.59c-29.2-.74-31.01,31.59-31.01,31.59v96.7h-53.25V85.02h53.25v20.53s16.12-24.79,47.9-24.79c41.78,0,48.95,19.83,53.93,26.99,4.98,7.16,9.81,25.69,9.81,51.07v96.7Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
