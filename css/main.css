@@ -50,7 +50,6 @@ svg {
 
 /* - - - - - -  Animations - - - - - - */
 
-
 @keyframes slideInRight {
   from {
     transform: translateX(-1rem);
@@ -77,9 +76,6 @@ svg {
     transform: rotate(360deg);
   }
 }
-  
-
-
 
 /* - - - - - - Typography - - - - - - */
 
@@ -147,13 +143,13 @@ header {
 }
 
 .logo-container {
-  display:grid;
-  grid-template-columns: 1fr;
-}
-
-#logo {
-  align-self: center;
-  width:min(15rem,100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid;
+  width: 7rem;
+  height: 7rem;
+  box-shadow: var(--black) 6px 2px 16px 1px;
 }
 
 .nav-bar {
@@ -214,7 +210,6 @@ section {
 #about {
   background-color: var(--main);
   box-shadow: #000000 0px 12px 36px;
-  
 }
 
 #about .section-container {
@@ -238,9 +233,10 @@ section {
 }
 
 /* - - - - - - Projects - - - - - - */
-#designs, #dev {
+#designs,
+#dev {
   box-shadow: #000000 0px 12px 36px;
-} 
+}
 
 .section-container {
   display: grid;
@@ -270,7 +266,6 @@ section {
   color: var(--black);
   margin-bottom: 2rem;
   box-shadow: #000000 0px -5px 16px;
-
 }
 
 .project-image {
@@ -306,8 +301,8 @@ section {
   color: var(--black);
 }
 
-#contact-me-button{
-  width: min(15rem,100%);
+#contact-me-button {
+  width: min(15rem, 100%);
 }
 
 #contact h2 {
@@ -347,14 +342,14 @@ footer p {
 @media only screen and (min-width: 45rem) {
   html {
     font-size: 110%;
-    padding:0;
-    margin:0;
-    border:none;
+    padding: 0;
+    margin: 0;
+    border: none;
   }
 
   .nav-container {
     display: flex;
-    width:80%;
+    width: 80%;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -363,8 +358,8 @@ footer p {
   }
 
   .nav-bar {
-    display:grid;
-    width:100%;
+    display: grid;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
   }
@@ -375,7 +370,7 @@ footer p {
     align-items: center;
   }
   .project-card {
-    grid-template-columns: min(40%,20rem) 5% 50%;
+    grid-template-columns: min(40%, 20rem) 5% 50%;
     grid-template-rows: 18rem;
     align-items: center;
     justify-items: space-evenly;
@@ -400,7 +395,7 @@ footer p {
     grid-template-columns: repeat(4, 1fr);
   }
   .nav-li {
-    padding:0rem;
+    padding: 0rem;
   }
 
   .project-container {
@@ -410,23 +405,24 @@ footer p {
     gap: 1rem;
   }
 
-  .project-card , #dev .project-card {
+  .project-card,
+  #dev .project-card {
     grid-template-columns: 1fr;
-    grid-template-rows: 15rem 22rem ;
+    grid-template-rows: 15rem 22rem;
   }
 
-  .project-image{
+  .project-image {
     grid-column: 1/2;
     grid-row: 1/2;
   }
 
   .project-image img {
-    width:min(20rem,80%);
+    width: min(20rem, 80%);
   }
-  
+
   .project-text {
-    padding:1rem;
-    align-self:flex-start ;
+    padding: 1rem;
+    align-self: flex-start;
     grid-column: 1/2;
     grid-row: 2/3;
   }
