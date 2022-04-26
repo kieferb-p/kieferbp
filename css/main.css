@@ -250,6 +250,7 @@ section {
 .project-container {
   display: grid;
   align-items: center;
+  justify-items: center;
 }
 
 .project-container .project-anchor{
@@ -266,6 +267,7 @@ section {
   margin-bottom: 2rem;
   box-shadow: #000000 0px -5px 16px;
   border-radius: .35rem;
+  width:80vw;
 }
 
 .project-image {
@@ -312,6 +314,8 @@ section {
 
 .project-description {
   margin-top:.25rem;
+  margin-bottom: .25rem;
+  padding: 0rem .5rem
 }
 
 .git-link {
