@@ -246,12 +246,20 @@ section {
 .section-container {
   display: grid;
   grid-template-columns: 1fr;
-}
-.project-container {
-  display: grid;
   align-items: center;
   justify-items: center;
 }
+
+.section-title {
+  justify-self: flex-start;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  width:80vw;
+}
+
 
 .project-container .project-anchor{
   box-shadow: #0000007a 0rem 1rem 1rem;
