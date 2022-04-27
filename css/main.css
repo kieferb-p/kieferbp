@@ -258,6 +258,8 @@ section {
   display: grid;
   grid-template-columns: 1fr;
   width:80vw;
+  align-items: center;
+  justify-items: center;
 }
 
 
@@ -275,7 +277,7 @@ section {
   margin-bottom: 2rem;
   box-shadow: #000000 0px -5px 16px;
   border-radius: .35rem;
-  width:80vw;
+  width:75vw;
 }
 
 .project-image {
@@ -539,6 +541,7 @@ footer .sub-footer {
 
   .project-container {
     grid-template-columns: 1fr 1fr 1fr;
+    width:90vw;
     align-items: stretch;
     justify-items: space-around;
     gap: 5rem;
@@ -547,6 +550,7 @@ footer .sub-footer {
   .project-card{
     grid-template-columns: 1fr;
     grid-template-rows: 15rem 20rem;
+    width:25vw
   }
 
   #designs .project-card {
