@@ -544,18 +544,19 @@ footer .sub-footer {
     width:90vw;
     align-items: stretch;
     justify-items: space-around;
-    gap: 5rem;
+    gap: 2.5rem;
   }
 
   .project-card{
     grid-template-columns: 1fr;
-    grid-template-rows: 15rem 20rem;
-    width:25vw
+    grid-template-rows: 1fr 2fr;
+    width:27vw
   }
 
   #designs .project-card {
     grid-template-columns: 1fr;
-    grid-template-rows: 15rem 19rem;
+    grid-template-rows: 15rem 1fr;
+    width:27vw
   }
 
   .project-image {
@@ -568,14 +569,25 @@ footer .sub-footer {
   }
 
   .project-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 3fr 1fr;
     padding: .25rem;
     align-self: flex-start;
     text-align: center;
     grid-column: 1/2;
-    grid-row: 2/3;
+    grid-row: 2/4;
+  }
+
+  #designs .project-text {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 1fr 1fr;
   }
 
   .project-title {
     margin-bottom: .5rem;
+  }
+  .project-description {
+    align-self: flex-start;
   }
 }
