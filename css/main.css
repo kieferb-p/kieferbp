@@ -40,7 +40,7 @@ svg {
 :root {
   --black: #131313;
   --white: #eeeff0;
-  --accent: #a5f5f1;
+  --accent: #a0ece8;
   --accent-dark: #1a5770;
   --secondary: #4982ba;
   --secondary-dark: #415e82;
@@ -116,7 +116,7 @@ h5 {
 p {
   font-weight: 400;
   font-size: 1.1rem;
-  margin-bottom:0rem;
+  margin-bottom: 0rem;
 }
 
 small,
@@ -128,10 +128,10 @@ small,
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  padding: .5rem;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 3rem;
 }
 
 .logo-container {
@@ -139,12 +139,13 @@ header {
   justify-content: center;
   align-items: center;
   border: solid;
-  border-radius: .25rem ;
+  border-radius: 0.25rem;
   width: 4rem;
   height: 4rem;
   box-shadow: var(--black) 6px 2px 16px 1px;
 }
 
+/* - - - - - - Nav - - - - - - */
 
 .nav-bar {
   list-style: none;
@@ -160,7 +161,7 @@ header {
 }
 
 .nav-bar li a {
-  align-self:center;
+  align-self: center;
   justify-self: center;
 }
 
@@ -170,6 +171,58 @@ header {
   font-size: 1.1rem;
   font-weight: 500;
   padding: 0rem 1rem;
+}
+
+/* - - - - - - Hamburger- - - - - - */
+
+.hamburger {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+  display: flex;
+  position: fixed;
+  right: -150%;
+  top: 5.35rem;
+  gap: 1rem;
+  flex-direction: column;
+  width: max(33%, 60vw);
+  text-align: center;
+  transition-duration: 0.3s;
+  background-color: rgb(245, 245, 245);
+}
+
+.bar {
+  position: sticky;
+  display: block;
+  box-shadow: white 0px 1px 16px 1px;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--purple);
+}
+
+.nav-menu.active {
+  right: 0;
+  padding: 1rem 2rem 2rem 2rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
 #about-me {
@@ -190,7 +243,7 @@ header {
   border: var(--secondary) solid 1px;
   background-color: #1b1b00;
   border-radius: 0.5rem;
-  transition-duration:.2s;
+  transition-duration: 0.2s;
 }
 
 #contact-me:hover {
@@ -257,27 +310,26 @@ section {
 .project-container {
   display: grid;
   grid-template-columns: 1fr;
-  width:80vw;
+  width: 80vw;
   align-items: center;
   justify-items: center;
 }
 
-
-.project-container .project-anchor{
+.project-container .project-anchor {
   box-shadow: #0000007a 0rem 1rem 1rem;
   transition-duration: 0.25s;
 }
 
 .project-card {
   display: grid;
-  padding: .5rem;
+  padding: 0.5rem;
   grid-template-columns: 1fr;
   background-color: var(--white);
   color: var(--black);
   margin-bottom: 2rem;
   box-shadow: #000000 0px -5px 16px;
-  border-radius: .35rem;
-  width:75vw;
+  border-radius: 0.35rem;
+  width: 75vw;
 }
 
 .project-image {
@@ -294,11 +346,10 @@ section {
   justify-content: center;
 }
 
-
 .project-anchor:active {
   box-shadow: none;
-  cursor:pointer;
-  border: outset var(--accent-dark) 3px
+  cursor: pointer;
+  border: outset var(--accent-dark) 3px;
 }
 
 .project-image img {
@@ -306,16 +357,16 @@ section {
 }
 
 #chesss {
-  width: min(12rem,100%)
+  width: min(12rem, 100%);
 }
 
 .project-title {
   text-align: center;
   text-decoration: underline;
-  margin: .5rem 0rem;
+  margin: 0.5rem 0rem;
 }
 
-.project-text{
+.project-text {
   display: grid;
   justify-items: center;
   align-items: flex-start;
@@ -323,9 +374,9 @@ section {
 }
 
 .project-description {
-  margin-top:.25rem;
-  margin-bottom: .25rem;
-  padding: 0rem .5rem
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  padding: 0rem 0.5rem;
 }
 
 .git-link {
@@ -333,15 +384,15 @@ section {
   flex-direction: row;
   justify-self: flex-end;
   align-self: flex-end;
-  padding-right:1rem;
-  margin-bottom: .5rem;
-  width:15rem;
-  fill:var(--black);
+  padding-right: 1rem;
+  margin-bottom: 0.5rem;
+  width: 15rem;
+  fill: var(--black);
   text-align: center;
 }
 
 .git-link:hover {
-  fill:var(--purple);
+  fill: var(--purple);
   color: var(--purple);
 }
 
@@ -386,12 +437,12 @@ section {
   border: var(--black) solid 1px;
   background-color: var(--white);
   opacity: 90%;
-  color:var(--black);
+  color: var(--black);
   font-size: 1.5rem;
   font-weight: 400;
   border-radius: 2rem;
   text-align: center;
-  padding: .5rem 0rem;
+  padding: 0.5rem 0rem;
   width: min(12rem, 100%);
 }
 
@@ -465,15 +516,14 @@ footer {
 
 footer .sub-footer {
   background-color: var(--secondary-dark);
-  color:var(--white);
+  color: var(--white);
   text-align: center;
-  box-shadow: #131313 0px -2px 32px .5px;
+  box-shadow: #131313 0px -2px 32px 0.5px;
 }
 
 /* - - - - - - Media Queries - - - - - - */
 
 @media only screen and (min-width: 45rem) {
-  
   html {
     font-size: 105%;
     padding: 0;
@@ -482,18 +532,13 @@ footer .sub-footer {
   }
 
   nav {
-    width:100%;
-    display:flex;
+    width: 100%;
+    display: flex;
     flex-direction: column;
   }
 
-  .nav-bar {
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-self: flex-end;
-  }
   .nav-li {
-    align-self:flex-end;
+    align-self: flex-end;
     padding: 0rem;
   }
 
@@ -514,17 +559,31 @@ footer .sub-footer {
     grid-template-rows: 2rem 12rem 1fr;
     grid-column: 3/5;
   }
-  
+
   .project-description {
     align-self: center;
   }
 }
 
 @media only screen and (min-width: 60rem) {
-
   header {
     display: grid;
     grid-template-columns: 15rem 1fr;
+    padding:1rem 0rem;
+  }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: flex-end;
+    position: unset;
+    gap: 0rem;
+    background-color: unset;
   }
 
   .logo-container {
@@ -533,7 +592,6 @@ footer .sub-footer {
 
 }
 
-
 @media only screen and (min-width: 85rem) {
   html {
     font-size: 110%;
@@ -541,22 +599,22 @@ footer .sub-footer {
 
   .project-container {
     grid-template-columns: 1fr 1fr 1fr;
-    width:90vw;
+    width: 90vw;
     align-items: stretch;
     justify-items: space-around;
     gap: 2.5rem;
   }
 
-  .project-card{
+  .project-card {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr;
-    width:27vw
+    width: 27vw;
   }
 
   #designs .project-card {
     grid-template-columns: 1fr;
     grid-template-rows: 15rem 1fr;
-    width:27vw
+    width: 27vw;
   }
 
   .project-image {
@@ -572,7 +630,7 @@ footer .sub-footer {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 3rem 3fr 1fr;
-    padding: .25rem;
+    padding: 0.25rem;
     align-self: flex-start;
     text-align: center;
     grid-column: 1/2;
@@ -585,7 +643,7 @@ footer .sub-footer {
   }
 
   .project-title {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   .project-description {
     align-self: flex-start;
