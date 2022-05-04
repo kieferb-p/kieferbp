@@ -32,20 +32,30 @@ themeTwo.addEventListener("click", function(){
   root.style.setProperty('--main','#C7935A');
   root.style.setProperty('--secondary','#F23A29')
   root.style.setProperty('--secondary-dark','#881515')
-  root.style.setProperty('--accent','#B51A1E')
+  root.style.setProperty('--accent','#EEEEEE')
   footerNav.style.setProperty('color','black')
   subFooter.style.setProperty('color','white')
 })
 
 themeThree.addEventListener("click", function(){
   root.style.setProperty('--logo-background','#F2F2F2');
-  root.style.setProperty('--hamburger','#1d1d1d')
+  root.style.setProperty('--hamburger','green')
   root.style.setProperty('--text','#fff');
   root.style.setProperty('--main','#000000');
   root.style.setProperty('--secondary','green')
   root.style.setProperty('--secondary-dark','dark green')
   root.style.setProperty('--accent','#E4F0F4')
 });
+
+themeFour.addEventListener("click", function(){
+  root.style.setProperty('--logo-background','#F2F2F2');
+  root.style.setProperty('--hamburger','#1d1d1d')
+  root.style.setProperty('--text','black');
+  root.style.setProperty('--main','#BadA55');
+  root.style.setProperty('--secondary','salmon')
+  root.style.setProperty('--secondary-dark','magenta')
+  root.style.setProperty('--accent','skyblue')
+})
 
 
 ham.addEventListener("click", () => {
