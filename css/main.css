@@ -39,13 +39,38 @@ svg {
 /* - - - - - - Colours - - - - - - */
 :root {
   --black: #131313;
-  --white: #eeeff0;
+  --text: #eeeff0;
+  --logo-background: #f7f7f7;
   --accent: #a0ece8;
   --accent-dark: #1a5770;
-  --secondary: #4982ba;
-  --secondary-dark: #415e82;
+  --secondary: #4b7197;
+  --secondary-dark: #37506e;
+  --secondary-light: #337fca;
   --main: #1e6a8b;
-  --purple: #4b2d72;
+  --hamburger: #4b2d72;
+}
+
+/* - - - - - - Themes - - - - - - - - - */
+
+.theme-choices ul {
+  display:flex;
+  text-decoration: none;
+  list-style: none;
+  gap:1rem;
+}
+
+.theme-choices li {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.theme:hover {
+  cursor: pointer;
 }
 
 /* - - - - - -  Animations - - - - - - */
@@ -145,6 +170,10 @@ header {
   box-shadow: var(--black) 6px 2px 16px 1px;
 }
 
+.logo {
+  background-color: var(--logo-background) ;
+}
+
 /* - - - - - - Nav - - - - - - */
 
 .nav-bar {
@@ -215,7 +244,7 @@ header {
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: var(--purple);
+  background-color: var(--hamburger);
 }
 
 .nav-menu.active {
@@ -226,7 +255,7 @@ header {
 }
 
 #about-me {
-  color: var(--main);
+  color: var(--secondary);
 }
 
 #des-projects {
@@ -234,7 +263,7 @@ header {
 }
 
 #dev-projects {
-  color: var(--secondary-dark);
+  color: var(--secondary-light);
 }
 
 #contact-me {
@@ -247,7 +276,7 @@ header {
 }
 
 #contact-me:hover {
-  background-color: var(--accent);
+  background-color: #1b1b00;
 }
 
 #about-me:hover,
@@ -262,7 +291,7 @@ header {
 section {
   margin: 0 auto;
   padding: 1.5rem;
-  color: var(--white);
+  color: var(--text);
 }
 /* - - - - - - About Me - - - - - - */
 #about {
@@ -274,7 +303,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--white);
+  color: var(--text);
 }
 
 .profile-pic {
@@ -324,7 +353,7 @@ section {
   display: grid;
   padding: 0.5rem;
   grid-template-columns: 1fr;
-  background-color: var(--white);
+  background-color: white;
   color: var(--black);
   margin-bottom: 2rem;
   box-shadow: #000000 0px -5px 16px;
@@ -392,8 +421,8 @@ section {
 }
 
 .git-link:hover {
-  fill: var(--purple);
-  color: var(--purple);
+  fill: var(--secondary-dark);
+  color: var(--secondary-dark);
 }
 
 .git-link svg {
@@ -418,6 +447,7 @@ section {
   height: 18rem;
   box-shadow: #131313 0px 0px 16px 2px;
   margin: 2rem auto;
+  color:white;
 }
 
 .cta-banner {
@@ -435,7 +465,7 @@ section {
 
 #contact-me-button {
   border: var(--black) solid 1px;
-  background-color: var(--white);
+  background-color: white;
   opacity: 90%;
   color: var(--black);
   font-size: 1.5rem;
@@ -448,14 +478,14 @@ section {
 
 #contact-me-button:hover {
   background-color: var(--black);
-  color: var(--white);
+  color: var(--text);
   opacity: 100%;
   cursor: pointer;
 }
 
 #contact h2 {
   border: solid black 1px;
-  background-color: var(--white);
+  background-color: var(--text);
   font-weight: 400;
   text-align: center;
   border-radius: 1rem;
@@ -465,7 +495,7 @@ section {
 #contact h2:hover {
   border: solid black 1px;
   background-color: black;
-  color: var(--white);
+  color: var(--text);
 }
 
 /* - - - - - - Footer - - - - - - */
@@ -486,8 +516,7 @@ footer {
 }
 
 .footer-logo {
-  border: solid var(--white) 1px;
-  background-color: var(--white);
+  border: solid var(--text) 1px;
   box-shadow: var(--black) 0px -2px 19px 1px;
   display: flex;
   align-items: center;
@@ -501,8 +530,8 @@ footer {
 }
 
 .footer-nav .nav-bar {
-  width: 98vw;
-  color: var(--black);
+  width: 100%;
+  color: white;
 }
 
 .footer-nav .nav-bar .nav-li {
@@ -511,12 +540,12 @@ footer {
 }
 
 .footer-nav .nav-bar .nav-li:hover {
-  color: var(--white);
+  color: var(--text);
 }
 
 footer .sub-footer {
   background-color: var(--secondary-dark);
-  color: var(--white);
+  color: var(--text);
   text-align: center;
   box-shadow: #131313 0px -2px 32px 0.5px;
 }
@@ -548,11 +577,17 @@ footer .sub-footer {
     align-items: center;
   }
 
+  .project-container {
+    width:85vw;
+  }
+
   .project-card {
+    width:100%;
     grid-template-columns: min(40%, 20rem) 5% 50%;
     grid-template-rows: 18rem;
     align-items: center;
     justify-items: space-evenly;
+
   }
 
   .project-text {
@@ -586,9 +621,12 @@ footer .sub-footer {
     background-color: unset;
   }
 
+
   .logo-container {
     margin-left:3rem;
   }
+
+  
 
 }
 
