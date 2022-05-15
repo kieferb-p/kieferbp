@@ -501,7 +501,7 @@ footer {
 }
 
 .footer-nav .nav-bar {
-  width: 98vw;
+  width: 100%;
   color: var(--black);
 }
 
