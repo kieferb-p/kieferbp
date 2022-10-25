@@ -277,6 +277,8 @@ section {
   color: var(--white);
 }
 
+
+
 .profile-pic {
   display: flex;
   justify-content: center;
@@ -555,6 +557,10 @@ footer .sub-footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+  }
+
+  .about-description {
+    padding-right:1rem
   }
 
   .project-card {
