@@ -264,6 +264,10 @@ section {
   padding: 1.5rem;
   color: var(--white);
 }
+.welcome {
+  text-align: center;
+  font-size: 2rem;
+}
 /* - - - - - - About Me - - - - - - */
 #about {
   background-color: var(--main);
@@ -286,7 +290,7 @@ section {
 
 .profile-pic img {
   box-shadow: rgb(4, 29, 40) 0px -2px 20px 12px;
-  width: min(20rem, 100%);
+  width: min(16rem, 100%);
   background-color: rgb(255, 234, 0);
   border-radius: 2%;
   margin: 1rem;
